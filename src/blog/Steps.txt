@@ -1,0 +1,8 @@
+Steps:
+1. models => makemigrations, migrate
+2. admin
+3. views
+4. url
+5. forms
+6. static files
+7 . templates
