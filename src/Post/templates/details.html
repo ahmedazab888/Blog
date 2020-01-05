@@ -3,4 +3,6 @@
 <h3>{{ post.title }}</h3>
 <p>{{ post.content }}</p>
 <hr>
-<a href="{% 'blog:edit_post' post.id %}">Edit Post</a>
+<a href="{% url 'blog:edit_post' post.id %}">Edit Post</a>
+
+

@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 from .models import Post
 from .form import PostForm
 
@@ -27,6 +27,7 @@ def create_post(request):
             new_form = form.save(commit=False)
             new_form.user = request.user
             new_form.save()
+            return redirect('/')
     else:
         form = PostForm()
 
@@ -44,6 +45,7 @@ def edit_post(request, id):
             new_form = form.save(commit=False)
             new_form.user = request.user
             new_form.save()
+            return redirect('/')
     else:
         form = PostForm(instance=post)
 
